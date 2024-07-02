@@ -1,12 +1,12 @@
-import { ClerkProvider } from "@clerk/nextjs";
-import { Inter } from "next/font/google";
-import "../globals.css";
+import { ClerkProvider } from '@clerk/nextjs';
+import { Inter } from 'next/font/google';
+import '../globals.css';
 
-const inter = Inter( { subsets: ["latin"] } );
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
-  title: "Threads",
-  description: "A Next.js 14 Threads Application",
+  title: 'Threads',
+  description: 'A Next.js 14 Threads Application',
 };
 
 export default function RootLayout({
@@ -17,9 +17,7 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en">
-        <body className={`${inter.className} bg-dark-1`}>
-          {children}
-        </body>
+        <body className={`${inter.className} bg-dark-1`}>{children}</body>
       </html>
     </ClerkProvider>
   );
